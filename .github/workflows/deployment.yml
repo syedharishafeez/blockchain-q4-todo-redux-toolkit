@@ -38,6 +38,9 @@ jobs:
     
       - name: Setup surge
         run: npm i -g surge
+      
+      - name: Setup sass
+        run: npm i -g node-sass
     
       - name: Run Surge
         run: surge ./build q4-todo-redux-toolkit.surge.sh --token ${{secrets.SURGE_TOKEN}}
