@@ -34,7 +34,7 @@ jobs:
           cmd: install
         
       - name: permissions
-        run: sudo chmod -R 777 /usr/local/lib/node_modules/
+        run: sudo npm install -g --unsafe-perm=true --allow-root
         
       - name: Build React App
         run: CI=false yarn build
